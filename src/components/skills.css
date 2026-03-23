@@ -1,0 +1,109 @@
+.main-page-skills {
+    width: 100%;
+    min-height: 70vh;
+    background-color: #f0f0f0;
+    transition: background-color 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    box-sizing: border-box;
+}
+
+.main-pagess.switch .main-page-skills {
+    background-color: #121212;
+    color: white;
+}
+
+.skills-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: min(1100px, 100%);
+    max-width: 1100px;
+    padding: 20px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.skills-title {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.skills-title h1 {
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+    width: 100%;
+}
+
+.tech-stack-item {
+    cursor: pointer;
+    width: clamp(120px, 22%, 180px);
+    min-width: 110px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: #fff;
+    padding: 14px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tech-stack-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.tech-stack-image {
+    width: 100%;
+    max-width: 140px;
+    height: auto;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .main-page-skills {
+        min-height: auto;
+        padding: 40px 16px;
+    }
+
+    .skills-content {
+        padding: 18px;
+        background: rgba(255, 255, 255, 0.65);
+    }
+
+    .tech-stack {
+        gap: 12px;
+    }
+
+    .tech-stack-item {
+        width: calc(50% - 12px);
+    }
+}
+
+@media (max-width: 480px) {
+    .tech-stack-item {
+        width: 100%;
+    }
+
+    .main-page-skills {
+        padding: 32px 12px;
+    }
+}

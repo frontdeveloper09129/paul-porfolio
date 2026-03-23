@@ -1,0 +1,8 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.app {
+    background-color: black;
+    z-index: 100;
+}

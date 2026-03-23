@@ -1,0 +1,157 @@
+.main-pagess{
+    background-color: white;
+    color: black;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+
+.main-pagess.switch {
+    background-color: #121212;
+    /* dark mode */
+    color: white;
+}
+
+/* optional: change link colors too */
+.main-pagess.switch a {
+    color: #f0a500;
+}
+
+.main-pagess.switch .hero {
+    background-color: #121212;
+}
+
+.main-pagess.switch .about-me {
+    background-color: #121212;
+}
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    /* full screen height */
+    display: flex;
+    transition: background-color 0.5s ease;
+    justify-content: flex-start;
+    /* horizontal center */
+    align-items: center;
+    /* vertical center */
+    background-color: #f0f0f0;
+    /* example background */
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.hero-content {
+    padding: 30px 40px;
+}
+
+p {
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    font-family: arial, sans-serif;
+}
+
+.hero-content h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+.contact-btn {
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.contact-btn button {
+    height: 40px;
+    border: 1px solid #080808;
+    border-radius: 3px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    /* smooth hover effect */
+}
+
+button:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    /* bigger shadow on hover */
+    transform: translateY(-2px);
+    /* slight lift effect */
+}
+
+.my-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 300px;
+    height: 400px;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        /* stack content vertically */
+        justify-content: center;
+        /* center vertically */
+        padding: 20px;
+        /* smaller padding */
+        min-height: auto;
+        /* adjust height for smaller screens */
+    }
+
+    .hero-content {
+        padding: 100px 0;
+        /* 20px for the top and 0 for the bottom */
+        text-align: center;
+        /* center text */
+    }
+
+    .my-image {
+        margin-top: 0;
+        /* space between text and image */
+    }
+
+    img {
+        width: 80%;
+        /* responsive image width */
+        height: auto;
+        /* keep aspect ratio */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 32px;
+        /* smaller heading */
+    }
+
+    .hero-content h2 {
+        font-size: 22px;
+        /* smaller subheading */
+    }
+
+    p {
+        font-size: 16px;
+        /* smaller paragraph */
+    }
+
+    .contact-btn {
+        flex-direction: column;
+        /* buttons stack */
+        width: 100%;
+        gap: 10px;
+    }
+
+    .contact-btn button {
+        width: 100%;
+    }
+}
