@@ -3,6 +3,7 @@ import menu from '../assets/menu.png';
 import { useState } from 'react';
 import './home.css'
 import './about.css'
+import './project.css'
 import myImage from '../assets/myImage.jpg';
 import './skills.css'
 import HTML from '../assets/html.png';
@@ -168,6 +169,12 @@ export const Home = () => {
                         ))}
                     </div>
                 </div>
+            </div>
+
+            {/* project page */}
+
+            <div className="project-main-container" id='project'>
+
             </div>
         </div>
     )
