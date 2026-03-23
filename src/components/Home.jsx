@@ -11,37 +11,53 @@ import JAVSCRIPT from '../assets/javascript.webp'
 import REACT from '../assets/react.webp'
 import PYTHON from '../assets/python.webp'
 import JAVA from '../assets/java.webp'
-
+import C from '../assets/c.png'
+import GIT from '../assets/git.png'
+import GITHUB from '../assets/github.png'
 
 // list of my teach stack
 const techStack = [
     {
         title: "HTML",
-        icon: <img className='tech-stack-image' src={HTML}/>
+        icon: <img className='tech-stack-image' src={HTML} />
     },
     {
         title: "CSS",
-        icon: <img className='tech-stack-image' src={CSS}/>
+        icon: <img className='tech-stack-image' src={CSS} />
     },
     {
         title: "JAVASCRIPT",
-        icon: <img className='tech-stack-image' src={JAVSCRIPT}/>
+        icon: <img className='tech-stack-image' src={JAVSCRIPT} />
     },
     {
         title: "REACT",
-        icon: <img className='tech-stack-image' src={REACT}/>
+        icon: <img className='tech-stack-image' src={REACT} />
     },
 
     {
         title: "PYTHON",
-        icon: <img className='tech-stack-image' src={PYTHON}/>
+        icon: <img className='tech-stack-image' src={PYTHON} />
     },
 
     {
         title: "JAVA",
-        icon: <img className='tech-stack-image' src={JAVA}/>
-    }
+        icon: <img className='tech-stack-image' src={JAVA} />
+    },
 
+    {
+        title: "C",
+        icon: <img className="tech-stack-image" src={C} />
+    },
+
+    {
+        title: "git",
+        icon: <img className="tech-stack-image" src={GIT}/>
+    },
+
+    {
+        title: "github",
+        icon: <img className='tech-stack-image' src={GITHUB}/>
+    }
 ];
 export const Home = () => {
 
@@ -141,10 +157,10 @@ export const Home = () => {
             {/* skill page */}
             <div className="main-page-skills" id='skills'>
                 <div className="skills-content">
-                    <div className="skills-title">
-                        <h1>WHAT I DO</h1>
-                    </div>
                     <div className="tech-stack">
+                        <div className="skills-title">
+                            <h1>WHAT I DO</h1>
+                        </div>
                         {techStack.map((value, index) => (
                             <div key={index} className="tech-stack-item">
                                 {value.icon}
