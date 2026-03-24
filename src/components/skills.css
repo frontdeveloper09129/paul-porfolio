@@ -33,16 +33,39 @@
 
 .skills-title {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     width: 100%;
     margin-bottom: 24px;
 }
 
 .skills-title h1 {
+    padding-bottom: 30px;
     font-size: clamp(1.6rem, 4vw, 2.2rem);
     letter-spacing: 1.2px;
     text-transform: uppercase;
     margin: 0;
+}
+
+/* tools btn */
+.btn {
+    width: 400px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+.btn button {
+    border: none;
+}
+
+.btn button.active {
+    background-color: #007bff;
+    color: white;
+    border-radius: 8px;
+    padding: 8px 16px;
 }
 
 .tech-stack {
@@ -66,12 +89,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.5s ease, transform 0.5s ease;
 }
 
 .tech-stack-item:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.tech-stack-item.hidden {
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
 }
 
 .tech-stack-image {

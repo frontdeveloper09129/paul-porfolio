@@ -19,10 +19,12 @@ import GITHUB from '../assets/github.png'
 // list of my teach stack
 const techStack = [
     {
+        tools: "langauge",
         title: "HTML",
         icon: <img className='tech-stack-image' src={HTML} />
     },
     {
+        tools: "langauge",
         title: "CSS",
         icon: <img className='tech-stack-image' src={CSS} />
     },
@@ -31,38 +33,46 @@ const techStack = [
         icon: <img className='tech-stack-image' src={JAVSCRIPT} />
     },
     {
+        tools: "langauge",
         title: "REACT",
         icon: <img className='tech-stack-image' src={REACT} />
     },
 
     {
+        tools: "langauge",
         title: "PYTHON",
         icon: <img className='tech-stack-image' src={PYTHON} />
     },
 
     {
+        tools: "langauge",
         title: "JAVA",
         icon: <img className='tech-stack-image' src={JAVA} />
     },
 
     {
+
+        tools: "langauge",
         title: "C",
         icon: <img className="tech-stack-image" src={C} />
     },
 
     {
+        tools: "framework",
         title: "git",
-        icon: <img className="tech-stack-image" src={GIT}/>
+        icon: <img className="tech-stack-image" src={GIT} />
     },
 
     {
+        tools: "framework",
         title: "github",
-        icon: <img className='tech-stack-image' src={GITHUB}/>
+        icon: <img className='tech-stack-image' src={GITHUB} />
     }
 ];
 export const Home = () => {
 
     const [menuBtn, setMenuBtn] = useState(false)
+    const [valuetools, setTools] = useState("")
     const handleClick = () => {
         const toggle = !menuBtn;
         setMenuBtn(toggle)
@@ -70,6 +80,12 @@ export const Home = () => {
     const [switchMode, setSwitchMode] = useState(false);
     const handleSwitch = () => {
         setSwitchMode(!switchMode)
+    }
+
+    // handleTools
+
+    const handleTools = (tools) => {
+        setTools(tools)
     }
 
     return (
@@ -161,12 +177,17 @@ export const Home = () => {
                     <div className="tech-stack">
                         <div className="skills-title">
                             <h1>WHAT I DO</h1>
+                            <div className="btn">
+                                <button className={valuetools === "langauge" ? "active" : ""} onClick={() => handleTools("langauge")}>Programmimg Langauge</button>
+                                <button className={valuetools === "framework" ? "active" : ""} onClick={() => handleTools("framework")}>Frame Work</button>
+                                <button className={valuetools === "" ? "active" : ""} onClick={() => handleTools("")}>Show All</button>
+                            </div>
                         </div>
                         {techStack.map((value, index) => (
-                            <div key={index} className="tech-stack-item">
-                                {value.icon}
-                            </div>
-                        ))}
+                                <div key={index} className={`tech-stack-item ${valuetools && value.tools !== valuetools ? 'hidden' : ''}`}>
+                                    {value.icon}
+                                </div>
+                            ))}
                     </div>
                 </div>
             </div>
