@@ -61,27 +61,50 @@ p {
 }
 
 .contact-btn {
-    width: 160px;
+    width: auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 15px;
     text-align: center;
 }
 
 .contact-btn button {
     height: 40px;
+    padding: 0 20px;
+    font-size: 16px;
+    font-weight: 600;
     border: 1px solid #080808;
     border-radius: 3px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
+    cursor: pointer;
     /* smooth hover effect */
 }
 
-button:hover {
+.contact-btn .hired {
+    background-color: #080808;
+    color: white;
+}
+
+.contact-btn .contact {
+    background-color: transparent;
+    color: #080808;
+}
+
+.contact-btn button:hover {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
     /* bigger shadow on hover */
     transform: translateY(-2px);
     /* slight lift effect */
+}
+
+.contact-btn .hired:hover {
+    background-color: #333;
+}
+
+.contact-btn .contact:hover {
+    background-color: #f0f0f0;
 }
 
 .my-image {
@@ -94,6 +117,7 @@ button:hover {
 img {
     width: 300px;
     height: 400px;
+    border-radius: 10px;
 }
 
 @media (max-width: 768px) {
@@ -149,6 +173,7 @@ img {
         /* buttons stack */
         width: 100%;
         gap: 10px;
+        align-items: stretch;
     }
 
     .contact-btn button {
