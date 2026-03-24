@@ -117,7 +117,7 @@ export const Home = () => {
 
                     <div className="contact-btn">
                         <button className="hired">Hire me</button>
-                        <button className="contact">Contact me</button>
+                        <button className="contact" href="#contact">Contact me</button>
                     </div>
                 </div>
 

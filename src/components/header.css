@@ -124,22 +124,34 @@ h1 {
 }
 
 @media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
     .navbar-link {
         position: fixed;
         top: 0;
         right: 0;
-        background: transparent;
-        width: 200px;
+        background: rgba(240, 240, 240, 0.95);
+        backdrop-filter: blur(10px);
+        width: 280px;
         height: 100vh;
-        padding: 20px;
+        padding: 80px 20px 20px;
         transform: translateX(100%);
         transition: all 0.3s ease;
-        z-index: 2;
+        z-index: 1000;
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
     }
 
     .nav-right button {
         opacity: 1;
         border: none;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: none;
+        font-size: 24px;
+        color: #080808;
     }
 
     .nav-right.exit {
@@ -150,7 +162,14 @@ h1 {
     .nav-right ul {
         display: flex;
         flex-direction: column;
+        gap: 20px;
         background-color: transparent;
+        margin-top: 20px;
+    }
+
+    .nav-right ul li {
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
 
     .navbar-link.show {
@@ -163,16 +182,44 @@ h1 {
         display: block;
         width: 30px;
         height: 30px;
-        transition: all 0.5s ease;
+        transition: all 0.3s ease;
         text-align: center;
         position: fixed;
         right: 20px;
-
+        top: 20px;
+        z-index: 999;
     }
 
     .icon-menu img:hover {
-        color: orange;
-        transform: translateY(-2px);
+        transform: scale(1.1);
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 12px 15px;
+    }
+
+    .navbar-link {
+        width: 100%;
+        padding: 70px 15px 20px;
+    }
+
+    .nav-right ul {
+        gap: 15px;
+    }
+
+    .icon-menu {
+        right: 15px;
+        top: 15px;
+    }
+
+    h1 {
+        font-size: 18px;
     }
 }
 

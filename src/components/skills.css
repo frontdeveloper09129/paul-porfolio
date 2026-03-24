@@ -159,9 +159,25 @@
 @media (max-width: 480px) {
     .tech-stack-item {
         width: 100%;
+        padding: 12px;
     }
 
     .main-page-skills {
         padding: 32px 12px;
+    }
+
+    .skills-content {
+        padding: 16px;
+        margin-top: 15px;
+    }
+
+    .skills-title h1 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .btn button {
+        padding: 10px 15px;
+        font-size: 0.9rem;
     }
 }
