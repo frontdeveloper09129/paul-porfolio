@@ -43,10 +43,6 @@ export const Home = () => {
 
     const form = useRef()
 
-    const handleimageClick = (image) => {
-        setImageProject(image)
-    }
-
     // contact form
     const sendEmail = (e) => {
         e.preventDefault();
@@ -183,8 +179,8 @@ export const Home = () => {
                 <div className="project-container">
                     {valueproject !== "website-project" ? (
                         ProjectImage.map((project, id) => (
-                            <div key={id} onClick={handleimageClick} className={`images-project ${valueproject && project.typeProject !== valueproject ? "hidden" : ""}`}>
-                                <div onClick={handleimageClick} className={`image ${imagesProject === project.id ? "red" : ""}`}>
+                            <div key={id} onClick={() => window.location.href = project.link} className={`images-project ${valueproject && project.typeProject !== valueproject ? "hidden" : ""}`}>
+                                <div className={`image ${imagesProject === project.id ? "red" : ""}`}>
                                     {project.img}
                                 </div>
                             </div>

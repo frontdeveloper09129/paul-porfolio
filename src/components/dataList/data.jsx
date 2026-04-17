@@ -9,6 +9,7 @@ import GIT from '../../assets/git.png';
 import GITHUB from '../../assets/github.png';
 import QUIZGAME from '../../assets/quizGame.jpeg';
 import CARDGAME from '../../assets/card-game.jpeg'
+import MESSENGERCLONE from '../../assets/messengerClone.png'
 
 export const TechStack = [
     {
@@ -67,16 +68,25 @@ export const TechStack = [
 
 // project list
 export const ProjectImage = [
-    {   
+    {
         id: 1,
         typeProject: "game-project",
         title: "quiz-game",
-        img: <img className='project-image' src={QUIZGAME}/>
+        img: <img className='project-image' src={QUIZGAME} />,
     },
-    {   
+    {
         id: 2,
         typeProject: "game-project",
         title: "card-game",
-        img: <img className='project-image' src={CARDGAME}/>
+        img: <img className='project-image' src={CARDGAME} />,
+
     },
+
+    {
+        id: 3,
+        typeProject: "Messenger Clone",
+        title: "messenger clone",
+        img: <img className='project-image' src={MESSENGERCLONE} />,
+        link: "https://frontdeveloper09129.github.io/messengerClone/"
+    }
 ]
